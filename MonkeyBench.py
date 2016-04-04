@@ -2614,7 +2614,7 @@ class MyMagics(Magics):
 
     @line_magic
     def ndl(self, line):
-        w = ndl_list_info(self.line2value(line))
+        w = ndl_list_info(self.line2value(line).decode('utf-8'))
         df = w.collector()
         return df
 
